@@ -1,7 +1,11 @@
 export function observe() {
     window.addEventListener('DOMContentLoaded', () => {
-    document.querySelector('nav').classList.add('view');
+        document.querySelector('nav').classList.add('view');
     });
+
+    window.addEventListener('resize', () =>{
+        document.querySelector('nav').style.width = "100%"
+    })
 
     const observedElements = document.querySelectorAll('.candidatures_tables');
 
