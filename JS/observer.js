@@ -1,5 +1,5 @@
 export function observe() {
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
         document.querySelector('nav').classList.add('view');
     });
 
