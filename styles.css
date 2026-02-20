@@ -31,13 +31,13 @@
     --fs-48: 48px;
 
     /* ### Font Weight ### */
-    --fw-Black: 900;
-    --fw-Bold: 700;
-    --fw-Semi-Bold: 600;
-    --fw-Medium: 500;
-    --fw-Light: 300;
-    --fw-Extra-Light: 200;
     --fw-Thin: 100;
+    --fw-Extra-Light: 200;
+    --fw-Light: 300;
+    --fw-Medium: 500;
+    --fw-Semi-Bold: 600;
+    --fw-Bold: 700;
+    --fw-Black: 900;
 
     /* ### Font Family */
     --ff-Out-Fit: "Outfit", sans-serif;
