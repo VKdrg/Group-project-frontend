@@ -1,4 +1,5 @@
-import { observe } from "./JS/observer.js"
 import { darkMode } from "./JS/darkmode.js"
-observe()
+import { observe } from "./JS/observer.js"
+
 darkMode()
+observe()
