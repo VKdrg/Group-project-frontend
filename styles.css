@@ -79,6 +79,17 @@ body{
         font-size: var(--fs-10);
         font-weight: var(--fw-Thin);
     }
+    button{
+        padding: 8px 56px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color ease 500ms, border ease 500ms;
+    }
+    button:active{
+
+        border: 2px solid;
+    }
 }
 
 /* ###### Light Mode ###### */
@@ -86,6 +97,18 @@ body.light_mode{
     background-color: var(--Color-1);
     color: var(--Color-1);
 
+    button{
+        background-color: var(--Color-1);
+        color: var(--White);
+    }
+    button:hover{
+        background-color: var(--Color-2);
+    }
+    button:active{
+        background-color: var(--White);
+        border-color: var(--Color-1);
+        color: var(--Color-1);
+    }
     nav{
         background-color: var(--Color-5);
     
@@ -100,12 +123,46 @@ body.light_mode{
             background-color: var(--Color-4);
         }
     }
+    main{
+        .candidatures_tables{
+            .top{
+                .tops{
+                    background-color: var(--White);
+                }
+            }
+            .bot{
+                background-color: var(--White);
+
+                .container{
+                    .fiches{
+                        border-color: var(--Black);
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background-color: var(--White);
+    }
 }
 
 /* ###### Dark Mode ###### */
 body.dark_mode{
-    color: var(--Color-1);
+    background-color: var(--Black);
+    color: var(--White);
 
+    button{
+        background-color: var(--White);
+        color: var(--Color-1);
+    }
+    button:hover{
+        color: var(--Color-2);
+    }
+    button:active{
+        background-color: var(--Color-1);
+        border-color: var(--White);
+        color: var(--White);
+    }
     nav{
         background-color: var(--Color-1);
 
@@ -120,17 +177,38 @@ body.dark_mode{
             background-color: var(--Color-1);
         }
     }
+    main{
+        .candidatures_tables{
+            .top{
+                .tops{
+                    background-color: var(--Color-1);
+                }
+            }
+            .bot{
+                background-color: var(--Color-1);
+
+                .container{
+                    .fiches{
+                        border-color: var(--Color-2);
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        background-color: var(--Color-1);
+    }
 }
 
 
 /* ###### Nav ###### */
 nav{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     position: fixed;
-    width: 100%;
     z-index: 50;
     box-shadow: 0 5px 10px #00000025;
     translate: 0 -150px;
@@ -184,7 +262,7 @@ nav input:checked ~ label span:nth-child(3){
 
 /* ###### Main ###### */
 main{
-    padding: 110px 32px 48px 32px;
+    padding: 110px 0 48px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,17 +270,17 @@ main{
     .candidatures_tables{
         display: flex;
         flex-direction: column;
-        color: var(--Black);
         opacity: 0;
         translate: 250px 0;
         transition: 500ms translate 600ms ease, 500ms opacity 600ms ease;
+        width: 100%;
         
         .top{
             display: flex;
+            overflow-y: hidden;
             
             .tops{
                 padding: 12px 24px;
-                background-color: var(--White);
                 border-radius: 16px 16px 0 0;
                 cursor: pointer;
                 transition: opacity ease 300ms;
@@ -215,9 +293,7 @@ main{
             }
         }
         .bot{
-            padding: 80px 50px;
-            background-color: var(--White);
-            border-radius: 0 16px 16px 16px;
+            padding: 32px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -228,24 +304,34 @@ main{
                 justify-content: center;
                 align-items: center;
                 gap: 24px;
+                width: 100%;
                 
                 .fiches{
                     padding: 16px 24px;
-                    width: 530px;
-                    height: 141px;
+                    width: 100%;
+                    max-width: 530px;
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
                     border-radius: 16px;
-                    background-color: var(--Color-5);
                     gap: 25px;
-                    border: 3px solid var(--Black);
+                    border: 3px solid;
                     cursor: pointer;
                     transition: transform ease 500ms;
 
                     img{
                         width: 81px;
                         height: 81px;
-                        border-radius: 50px;
+                        border-radius: 50%;
+                    }
+                    .df{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+
+                        p:nth-child(3){
+                            color: var(--Color-2);
+                        }
                     }
                 }
                 .fiches:hover{
@@ -257,24 +343,6 @@ main{
                     align-items: center;
                     width: 530px;
                     height: 141px;
-
-                    button{
-                        padding: 8px 56px;
-                        background-color: var(--Color-1);
-                        color: var(--White);
-                        border: none;
-                        border-radius: 8px;
-                        cursor: pointer;
-                        transition: background-color ease 500ms, border ease 500ms;
-                    }
-                    button:hover{
-                        background-color: var(--Color-2);
-                    }
-                    button:active{
-                        background-color: var(--White);
-                        border: 2px solid var(--Color-1);
-                        color: var(--Color-1);
-                    }
                 }
             }
         }
@@ -287,7 +355,6 @@ main{
 
 /* ###### Footer ###### */
 footer{
-    background-color: var(--White);
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -347,6 +414,25 @@ footer{
     nav{
         padding: 16px 24px;
     }
+
+    /* ###### Main ###### */
+    main{
+        padding: 115px 16px 48px 16px;
+
+        .candidatures_tables{
+            .bot{
+                border-radius: 0 16px 16px 16px;
+                .container{
+                    .fiches{
+                        flex-direction: row;
+                        justify-content: start;
+                        align-items: center;
+                        padding: 32px 48px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 1280px){
@@ -380,5 +466,10 @@ footer{
     /* ###### Nav ###### */
     nav{
         padding: 16px 24px;
+    }
+
+    /* ###### Main ###### */
+    main{
+        padding: 115px 32px 48px 32px;
     }
 }
