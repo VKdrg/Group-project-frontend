@@ -1,4 +1,53 @@
-input {}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* ###### Global ###### */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff-Out-Fit);
+}
+
+:root {
+
+    /* ### Color ###*/
+    --Black: #000;
+    --White: #fff;
+    --Color-1: #283F3B;
+    --Color-2: #8BA27C;
+    --Color-3: #E7F3DC;
+    --Color-4: #CDCDCD;
+    --Color-5: #F5F5F5;
+
+    /* ### Font Size ### */
+    --fs-10: 10px;
+    --fs-12: 12px;
+    --fs-16: 16px;
+    --fs-20: 20px;
+    --fs-24: 24px;
+    --fs-28: 28px;
+    --fs-30: 30px;
+    --fs-32: 32px;
+    --fs-40: 40px;
+    --fs-48: 48px;
+
+    /* ### Font Weight ### */
+    --fw-Black: 900;
+    --fw-Bold: 700;
+    --fw-Semi-Bold: 600;
+    --fw-Medium: 500;
+    --fw-Light: 300;
+    --fw-Extra-Light: 200;
+    --fw-Thin: 100;
+
+    /* ### Font Family */
+    --ff-Out-Fit: "Outfit", sans-serif;
+}
+
+/* ###### Body ###### */
+body {
+    color: var(--Color-1);
+}
 
 button {
     padding: 8px 56px;
@@ -20,7 +69,7 @@ button:active {
     color: var(--Color-1);
 }
 
-body {
-    font-family: var(--ff-Out-Fit);
-    color: var(--Color-1);
+#registerForm {
+    display: flex;
+    flex-direction: column;
 }
