@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet groupe</title>
-    <link rel="stylesheet" href="styles.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="main.js" defer></script>
+    <script type="module" src="../main.js" defer></script>
+    <link rel="stylesheet" href="detail_list.css">
 </head>
 
 
@@ -34,7 +34,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -45,7 +48,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -56,7 +62,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -67,7 +76,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -78,7 +90,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -89,7 +104,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -100,7 +118,10 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
             <div class="fiches">
                 <div class="left">
@@ -111,10 +132,32 @@
                         <p class="paragraph_2">Candidature : XX/XX/XXXX</p>
                     </div>
                 </div>
-                <button class="paragraph_1">Voir</button>
+                <div class="right">
+                    <ion-icon name="create-outline" class="header_3 button_modifier"></ion-icon>
+                    <button class="paragraph_1">Voir</button>
+                </div>
             </div>
         </div>
     </main>
+
+    <div class="modifier_candidature">
+        <ion-icon name="close-outline" class="icon_close header_4"></ion-icon>
+        <h2 class="header_2">Modifier candidature</h2>
+        <div class="selections">
+            <input type="text" placeholder="Nom de l'entreprise" class="paragraph_1">
+            <input type="text" placeholder="Lieu" class="paragraph_1">
+            <input type="text" placeholder="Intitulé du poste" class="paragraph_1">
+            <input type="date" class="paragraph_1">
+            <select name="statuts" id="statuts" class="paragraph_1">
+                <option value="en_cours">En cours</option>
+                <option value="refus">Refus</option>
+                <option value="valide">Validé</option>
+            </select>
+            <input type="text" placeholder="Contact" class="paragraph_1">
+        </div>
+        <textarea name="notes" id="notes" class="paragraph_1" placeholder="Ajouter des notes ..."></textarea>
+        <button class="header_4">Sauvegarder</button>
+    </div>
 
     <footer>
         <div class="reseaux">

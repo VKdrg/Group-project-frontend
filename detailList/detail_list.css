@@ -45,6 +45,7 @@
 
 /* ###### Body ###### */
 body{
+    position: relative;
     font-family: var(--ff-Out-Fit);
     color: var(--Color-1);
     position: relative;
@@ -101,6 +102,10 @@ body.light_mode{
     button{
         background-color: var(--Color-1);
         color: var(--White);
+
+        a{
+            color: var(--White);
+        }
     }
     button:hover{
         background-color: var(--Color-2);
@@ -109,6 +114,10 @@ body.light_mode{
         background-color: var(--White);
         border-color: var(--Color-1);
         color: var(--Color-1);
+
+        a{
+            color: var(--Color-1);
+        }
     }
     nav{
         background-color: var(--Color-5);
@@ -145,14 +154,26 @@ body.dark_mode{
     button{
         background-color: var(--White);
         color: var(--Color-1);
+
+        a{
+            color: var(--Color-1);
+        }
     }
     button:hover{
         color: var(--Color-2);
+
+        a{
+            color: var(--Color-2);
+        }
     }
     button:focus{
         background-color: var(--Color-1);
         border-color: var(--White);
         color: var(--White);
+
+        a{
+            color: var(--White);
+        }
     }
     nav{
         background-color: var(--Color-1);
@@ -241,7 +262,7 @@ main{
         transition: 500ms translate 1.2s ease, 500ms opacity 1.2s ease;
         
         ion-icon{
-            transform: translateY(1px);
+            transform: translateY(3px);
             transition: translate ease 300ms;
         }
     }
@@ -263,12 +284,12 @@ main{
         width: 100%;
         padding: 32px;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: 16px 32px;
 
         .fiches{
-            padding: 16px 24px;
+            padding: 16px;
             width: 100%;
-            max-width: 530px;
+            max-width: 550px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -298,6 +319,17 @@ main{
                     }
                 }
             }
+            .right{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                align-items: center;
+                gap: 8px;
+
+                ion-icon:hover{
+                    color: var(--Color-2);
+                }
+            }
         }
         .fiches:hover{
             transform: translateY(-10px);
@@ -316,8 +348,72 @@ main{
     }
 }
 
+/* ###### Modifier candidature ###### */
+.modifier_candidature{
+    position: relative;
+    padding: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: #283F3B50;
+    box-shadow: 0 5px 10px #000;
+    gap: 24px;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+
+    .icon_close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+    }
+    .icon_close:hover{
+        color: var(--Color-2);
+    }
+    .selections{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        input{
+            padding: 8px 24px;
+            background-color: var(--Color-4);
+            border: none;
+            border-radius: 16px;
+            outline: none;
+            cursor: pointer;
+        }
+        select{
+            padding: 8px 24px;
+            background-color: var(--Color-4);
+            border: none;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+    }
+    textarea{
+        width: 100%;
+        height: 96px;
+        padding: 16px;
+        border-radius: 8px;
+        outline: none;
+    }
+}
+
 /* ###### Footer ###### */
 footer{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -391,13 +487,22 @@ footer{
             border-radius: 16px;
 
             .fiches{
-                flex-direction: column;
+                flex-direction: row;
                 justify-content: start;
                 justify-content: center;
                 padding: 16px;
 
                 button{
                     align-self: flex-end;
+                }
+                .right{
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 8px;
+
+                    ion-icon{
+                        align-self: flex-end;
+                    }
                 }
             }
         }
