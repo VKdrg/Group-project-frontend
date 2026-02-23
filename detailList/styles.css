@@ -228,8 +228,25 @@ main{
     padding: 110px 0 166px 0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    
+    gap: 16px;
+
+    .button_retour{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        ion-icon{
+            transform: translateY(1px);
+            transition: translate ease 300ms;
+        }
+    }
+    .button_retour:hover, .button_retour:focus{
+        ion-icon{
+            translate: 5px;
+        }
+    }
     .candidatures_tables{
         display: flex;
         justify-content: center;
@@ -360,6 +377,9 @@ footer{
     main{
         padding: 115px 16px 166px 16px;
 
+        .button_retour{
+            align-self: flex-end;
+        }
         .candidatures_tables{
             border-radius: 16px;
 
