@@ -47,6 +47,7 @@
 body{
     font-family: var(--ff-Out-Fit);
     color: var(--Color-1);
+    position: relative;
 
     a{
         color: var(--Color-1);
@@ -224,7 +225,7 @@ nav.view{
 
 /* ###### Main ###### */
 main{
-    padding: 110px 0 48px 0;
+    padding: 110px 0 166px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -238,7 +239,7 @@ main{
         width: 100%;
         padding: 32px;
         flex-wrap: wrap;
-        gap: 24px;
+        gap: 16px;
 
         .fiches{
             padding: 16px 24px;
@@ -253,6 +254,11 @@ main{
             cursor: pointer;
             transition: transform ease 500ms;
 
+            .left{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+                
                 img{
                     width: 81px;
                     height: 81px;
@@ -267,10 +273,11 @@ main{
                         color: var(--Color-2);
                     }
                 }
+            }
         }
         .fiches:hover{
             transform: translateY(-10px);
-            }
+        }
         .button_container{
             display: flex;
             justify-content: center;
@@ -351,21 +358,30 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 115px 16px 48px 16px;
+        padding: 115px 16px 166px 16px;
 
         .candidatures_tables{
             border-radius: 16px;
+
             .fiches{
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: start;
-                align-items: center;
-                padding: 32px 48px;
+                justify-content: center;
+                padding: 16px;
+
+                button{
+                    align-self: flex-end;
+                }
             }
         }
     }
 
     /* ###### Footer ###### */
     footer{
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
         padding: 32px 24px;
         align-items: start;
     }
@@ -406,7 +422,7 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 115px 32px 48px 32px;
+        padding: 115px 32px 166px 32px;
     }
 
     /* ###### Footer ###### */
