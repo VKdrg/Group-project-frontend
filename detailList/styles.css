@@ -125,19 +125,9 @@ body.light_mode{
     }
     main{
         .candidatures_tables{
-            .top{
-                .tops{
-                    background-color: var(--White);
-                }
-            }
-            .bot{
-                background-color: var(--White);
-
-                .container{
-                    .fiches{
-                        border-color: var(--Black);
-                    }
-                }
+            background-color: var(--White);
+            .fiches{
+                border-color: var(--Black);
             }
         }
     }
@@ -179,19 +169,9 @@ body.dark_mode{
     }
     main{
         .candidatures_tables{
-            .top{
-                .tops{
-                    background-color: var(--Color-1);
-                }
-            }
-            .bot{
-                background-color: var(--Color-1);
-
-                .container{
-                    .fiches{
-                        border-color: var(--Color-2);
-                    }
-                }
+            background-color: var(--Color-1);
+            .fiches{
+                border-color: var(--Color-2);
             }
         }
     }
@@ -251,82 +231,52 @@ main{
     
     .candidatures_tables{
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         opacity: 0;
         translate: 250px 0;
         transition: 500ms translate 600ms ease, 500ms opacity 600ms ease;
         width: 100%;
-        
-        .top{
+        padding: 32px;
+        flex-wrap: wrap;
+        gap: 24px;
+
+        .fiches{
+            padding: 16px 24px;
+            width: 100%;
+            max-width: 530px;
             display: flex;
-            overflow-y: hidden;
-            
-            .tops{
-                padding: 12px 24px;
-                border-radius: 16px 16px 0 0;
-                cursor: pointer;
-                transition: opacity ease 300ms;
-            }
-            .alternances, .emplois, .plus{
-                opacity: 60%;
-            }
-            .alternances:hover, .emplois:hover, .plus:hover{
-                opacity: 80%;
-            }
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 16px;
+            gap: 25px;
+            border: 3px solid;
+            cursor: pointer;
+            transition: transform ease 500ms;
+
+                img{
+                    width: 81px;
+                    height: 81px;
+                    border-radius: 50%;
+                }
+                .df{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+                    p:nth-child(3){
+                        color: var(--Color-2);
+                    }
+                }
         }
-        .bot{
-            padding: 32px;
+        .fiches:hover{
+            transform: translateY(-10px);
+            }
+        .button_container{
             display: flex;
             justify-content: center;
             align-items: center;
-
-            .container{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 24px;
-                width: 100%;
-                
-                .fiches{
-                    padding: 16px 24px;
-                    width: 100%;
-                    max-width: 530px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    border-radius: 16px;
-                    gap: 25px;
-                    border: 3px solid;
-                    cursor: pointer;
-                    transition: transform ease 500ms;
-
-                    img{
-                        width: 81px;
-                        height: 81px;
-                        border-radius: 50%;
-                    }
-                    .df{
-                        display: flex;
-                        flex-direction: column;
-                        gap: 8px;
-
-                        p:nth-child(3){
-                            color: var(--Color-2);
-                        }
-                    }
-                }
-                .fiches:hover{
-                    transform: translateY(-10px);
-                }
-                .button_container{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 530px;
-                    height: 141px;
-                }
-            }
+            width: 530px;
+            height: 141px;
         }
     }
     .candidatures_tables.view{
@@ -404,16 +354,12 @@ footer{
         padding: 115px 16px 48px 16px;
 
         .candidatures_tables{
-            .bot{
-                border-radius: 0 16px 16px 16px;
-                .container{
-                    .fiches{
-                        flex-direction: row;
-                        justify-content: start;
-                        align-items: center;
-                        padding: 32px 48px;
-                    }
-                }
+            border-radius: 16px;
+            .fiches{
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                padding: 32px 48px;
             }
         }
     }
