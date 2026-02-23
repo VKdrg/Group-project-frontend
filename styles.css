@@ -47,6 +47,7 @@
 body{
     font-family: var(--ff-Out-Fit);
     color: var(--Color-1);
+    position: relative;
 
     a{
         color: var(--Color-1);
@@ -244,7 +245,7 @@ nav.view{
 
 /* ###### Main ###### */
 main{
-    padding: 110px 0 48px 0;
+    padding: 110px 0 166px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,6 +342,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
     gap: 16px;
     padding: 32px 0;
 
@@ -401,7 +406,7 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 115px 16px 48px 16px;
+        padding: 115px 16px 166px 16px;
 
         .candidatures_tables{
             .bot{
@@ -464,7 +469,7 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 115px 32px 48px 32px;
+        padding: 115px 32px 166px 32px;
     }
 
     /* ###### Footer ###### */

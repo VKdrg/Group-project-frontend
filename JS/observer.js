@@ -3,7 +3,7 @@ export function observe() {
         document.querySelector('nav').classList.add('view');
     });
 
-    const observedElements = document.querySelectorAll('.candidatures_tables');
+    const observedElements = document.querySelectorAll('.candidatures_tables, .button_retour');
 
     const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

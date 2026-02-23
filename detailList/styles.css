@@ -236,6 +236,9 @@ main{
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 0;
+        translate: 150px 0;
+        transition: 500ms translate 1.2s ease, 500ms opacity 1.2s ease;
         
         ion-icon{
             transform: translateY(1px);
@@ -246,6 +249,10 @@ main{
         ion-icon{
             translate: 5px;
         }
+    }
+    .button_retour.view{
+        opacity: 1;
+        translate: 0;
     }
     .candidatures_tables{
         display: flex;
