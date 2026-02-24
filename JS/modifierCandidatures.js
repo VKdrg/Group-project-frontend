@@ -6,11 +6,9 @@ export function modifierCandidatures() {
     buttonModifier.forEach(bm => {
         bm.addEventListener('click', () => {
             modifierCandidatures.style.visibility = 'visible'
-            modifierCandidatures.style.opacity = '1'
         })
     });
     buttonFermerCandidatures.addEventListener('click', () => {
         modifierCandidatures.style.visibility = 'hidden'
-        modifierCandidatures.style.opacity = '0'
     })
 }

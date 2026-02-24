@@ -191,8 +191,8 @@ body.light_mode{
             color: var(--Color-2);
         }
         button:focus{
-            color: var(--Black);
             border-color: var(--Black);
+            color: var(--Black);
         }
     }
     footer{
@@ -281,6 +281,9 @@ body.dark_mode{
         }
         button{
             background-color: var(--White);
+        }
+        button:focus{
+            color: var(--Black);
         }
     }
     footer{
@@ -451,8 +454,6 @@ main{
     backdrop-filter: blur(5px);
     border-radius: 16px;
     border: 5px solid;
-    transition: opacity ease 300ms;
-    opacity: 0;
     visibility: hidden;
 
     .icon_close{
@@ -507,8 +508,6 @@ main{
     backdrop-filter: blur(5px);
     border-radius: 16px;
     border: 5px solid;
-    transition: opacity ease 300ms;
-    opacity: 0;
     visibility: hidden;
 
     .icon_close{
