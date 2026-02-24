@@ -139,6 +139,17 @@ body.light_mode{
                         border-color: var(--Black);
                     }
                 }
+                .button_container{
+                    button{
+                        background-color: var(--Color-4);
+                    }
+                    button:hover{
+                        background-color: var(--Color-2);
+                        a{
+                            color: var(--White);
+                        }
+                    }
+                }
             }
         }
     }
@@ -191,6 +202,13 @@ body.dark_mode{
                 .container{
                     .fiches{
                         border-color: var(--Color-2);
+                    }
+                }
+                .button_container{
+                    button:hover{
+                        a{
+                            color: var(--Color-2);
+                        }
                     }
                 }
             }
@@ -326,6 +344,10 @@ main{
                     align-items: center;
                     width: 530px;
                     height: 141px;
+                    
+                    a{
+                        transition: color ease 300ms;
+                    }
                 }
             }
         }

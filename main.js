@@ -1,7 +1,10 @@
 import { darkMode } from "./JS/darkmode.js"
 import { login } from "./JS/login.js"
 import { observe } from "./JS/observer.js"
+import { modifierCandidatures } from "./JS/modifierCandidatures.js"
+import { afficherCandidatures } from "./JS/afficherCandidatures.js"
 
 darkMode()
 observe()
-login()
+modifierCandidatures()
+afficherCandidatures()
