@@ -9,7 +9,6 @@
 }
 
 :root {
-
     /* ### Color ###*/
     --Black: #000;
     --White: #fff;
@@ -72,4 +71,13 @@ button:active {
 #registerForm {
     display: flex;
     flex-direction: column;
+}
+
+#usermail, #userpw {
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover{
+    text-decoration: underline;
 }
