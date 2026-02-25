@@ -4,6 +4,8 @@ import { Login } from "./JS/login.js"
 import { observe } from "./JS/observer.js"
 import { DeleteAccount, EditProfile, ViewProfile } from "./JS/profile.js"
 import { Register } from "./JS/register.js"
+import { modifierCandidatures } from "./JS/modifierCandidatures.js"
+import { afficherCandidatures } from "./JS/afficherCandidatures.js"
 
 observe()
 
@@ -24,6 +26,9 @@ CreateJob()
 ViewJob()
 EditJob()
 DeleteJob()
+
+modifierCandidatures()
+afficherCandidatures()
 
 // Company actions
 
