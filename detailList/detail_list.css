@@ -226,6 +226,33 @@ body.light_mode{
             border-color: var(--Black);
         }
     }
+    .nouvelle_candidature{
+        color: var(--White);
+        background-color: var(--Color-1);
+        border-color: var(--Color-2);
+
+        .selections{
+            input{
+                background-color: var(--White);
+                color: var(--Color-1);
+            }
+            select{
+                background-color: var(--White);
+                color: var(--Color-1);
+            }
+        }
+        button{
+            background-color: var(--White);
+            color: var(--Color-1);
+        }
+        button:hover{
+            color: var(--Color-2);
+        }
+        button:focus{
+            color: var(--Black);
+            border-color: var(--Black);
+        }
+    }
     footer{
         background-color: var(--White);
     }
@@ -349,6 +376,22 @@ body.dark_mode{
         }
         button:focus{
             color: var(--Black);
+        }
+    }
+    .nouvelle_candidature{
+        background-color: var(--Color-2);
+        border-color: var(--White);
+
+        .selections{
+            input{
+                background-color: var(--White);
+            }
+            select{
+                background-color: var(--White);
+            }
+        }
+        button{
+            background-color: var(--White);
         }
     }
     footer{
@@ -513,8 +556,9 @@ main{
     }
 }
 
-/* ###### Modifier Candidatures ###### */
-.modifier_candidature{
+/* ###### Modifier Candidatures et Nouvelle Candidature ###### */
+.modifier_candidature, .nouvelle_candidature{
+    z-index: 100;
     position: fixed;
     padding: 16px;
     flex-direction: column;
@@ -573,6 +617,7 @@ main{
 
 /* ###### Voir Candidatures ###### */
 .voir_candidature{
+    z-index: 100;
     position: fixed;
     padding: 16px;
     flex-direction: column;

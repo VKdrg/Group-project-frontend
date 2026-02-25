@@ -7,8 +7,8 @@ export function afficherCandidatures() {
 
     buttonVoir.forEach(bv => {
         bv.addEventListener('click', () => {
-            voirCandidatures.style.visibility = 'visible'
             voirCandidatures.style.opacity = '1'
+            voirCandidatures.style.visibility = 'visible'
         })
     });
     buttonFermerCandidatures.forEach(bfc => {

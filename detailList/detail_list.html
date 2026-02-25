@@ -28,7 +28,7 @@
     
     <main>
         <div class="top_df">
-            <button class="bouton_ajout_candidatures paragraph_1">Ajouter une nouvelle candidature</button>
+            <button class="button_ajout_candidatures paragraph_1">Ajouter une nouvelle candidature</button>
             <button class="button_retour paragraph_1"><a href="../index.html">Retour <ion-icon name="arrow-forward-outline"></ion-icon></a></button>
         </div>
         <div class="candidatures_tables">
@@ -183,6 +183,25 @@
             <h4>Lorem</h4>
         </div>
         <button class="header_4 button_modifier">Modifier</button>
+    </div>
+
+    <div class="nouvelle_candidature">
+        <ion-icon name="close-outline" class="icon_close header_4"></ion-icon>
+        <h2 class="header_2">Modifier candidature</h2>
+        <div class="selections">
+            <input type="text" placeholder="Nom de l'entreprise" class="paragraph_1">
+            <input type="text" placeholder="Lieu" class="paragraph_1">
+            <input type="text" placeholder="Intitulé du poste" class="paragraph_1">
+            <input type="date" class="paragraph_1">
+            <select name="statuts" id="statuts" class="paragraph_1">
+                <option value="en_cours">En cours</option>
+                <option value="refus">Refus</option>
+                <option value="valide">Validé</option>
+            </select>
+            <input type="text" placeholder="Contact" class="paragraph_1">
+        </div>
+        <textarea name="notes" id="notes" class="paragraph_1" placeholder="Ajouter des notes ..."></textarea>
+        <button class="header_4 button_save">Sauvegarder</button>
     </div>
 
     <footer>
