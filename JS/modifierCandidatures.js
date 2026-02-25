@@ -3,11 +3,18 @@ export function modifierCandidatures() {
     const buttonModifier = document.querySelectorAll('.button_modifier')
     const buttonFermerCandidatures = document.querySelector('.icon_close')
     const buttonSave = document.querySelector('.button_save')
+    const voirCandidatures = document.querySelector('.voir_candidature')
+    const nouvelleCandidatures = document.querySelector('.nouvelle_candidature')
 
     buttonModifier.forEach(bm => {
         bm.addEventListener('click', () => {
+            voirCandidatures.style.visibility = 'hidden'
+            voirCandidatures.style.opacity = '0'
+            nouvelleCandidatures.style.visibility = 'hidden'
+            nouvelleCandidatures.style.opacity = '0'
             modifierCandidatures.style.visibility = 'visible'
             modifierCandidatures.style.opacity = '1'
+            
         })
     });
     buttonFermerCandidatures.addEventListener('click', () => {

@@ -4,9 +4,15 @@ export function afficherCandidatures() {
     const buttonModifier = document.querySelectorAll('.button_modifier')
     const buttonFermerCandidatures = document.querySelectorAll('.icon_close')
     const modifierCandidatures = document.querySelector('.modifier_candidature')
+    const nouvelleCandidatures = document.querySelector('.nouvelle_candidature')
+
 
     buttonVoir.forEach(bv => {
         bv.addEventListener('click', () => {
+            modifierCandidatures.style.visibility = 'hidden'
+            modifierCandidatures.style.opacity = '0'
+            nouvelleCandidatures.style.visibility = 'hidden'
+            nouvelleCandidatures.style.opacity = '0'
             voirCandidatures.style.opacity = '1'
             voirCandidatures.style.visibility = 'visible'
         })
