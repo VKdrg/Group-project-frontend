@@ -1,4 +1,4 @@
-export function darkMode() {
+export function DarkMode() {
     const buttonDarkMode = document.querySelectorAll('.icon_dark_mode')
     const body = document.querySelector('body')
     let darkMode = localStorage.getItem("dark_mode")

@@ -1,4 +1,4 @@
-export function login() {
+export function Login() {
     const pw = document.querySelector('#inputPw')
     const icon = document.querySelector('#pwViewIcon')
     
@@ -16,7 +16,7 @@ export function login() {
         icon.namespaceURI.replace('eye-outline', 'eye-off-outline')
     })
 
-
+    // fetch api method post
     // localStorage Token
 
 

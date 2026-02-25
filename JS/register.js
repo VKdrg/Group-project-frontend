@@ -1,4 +1,4 @@
-export function register() {
+export function Register() {
     const pw = document.querySelector('#inputPw')
     const icon = document.querySelector('#pwViewIcon')
 
@@ -16,5 +16,6 @@ export function register() {
         icon.namespaceURI.replace('eye-outline', 'eye-off-outline')
     })
     
+    // fetch api method post
     // regex mail
 }
