@@ -9,12 +9,14 @@ export function modifierCandidatures() {
             modifierCandidatures.style.visibility = 'visible'
             modifierCandidatures.style.opacity = '1'
         })
-    });
+    })
+
     buttonFermerCandidatures.addEventListener('click', () => {
         modifierCandidatures.style.visibility = 'hidden'
         modifierCandidatures.style.opacity = '0'
     })
-    buttonSave.addEventListener('click', ()=>{
+
+    buttonSave.addEventListener('click', () => {
         modifierCandidatures.style.visibility = 'hidden'
         modifierCandidatures.style.opacity = '0'
         buttonSave.style.color = 'black'
