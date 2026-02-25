@@ -116,12 +116,8 @@ body.light_mode{
         a{
             color: var(--Color-1);
         }
-        span{
+        ion-icon{
             color: var(--Color-1);
-        }
-        .dropdown_content{
-            border-color: var(--Color-1);
-            background-color: var(--Color-4);
         }
     }
     main{
@@ -179,14 +175,10 @@ body.dark_mode{
         background-color: var(--Color-1);
 
         a{
-            color: var(--Color-4);
+            color: var(--White);
         }
-        span{
-            color: var(--Color-4);
-        }
-        .dropdown_content{
-            border-color: var(--Color-4);
-            background-color: var(--Color-1);
+        ion-icon{
+            color: var(--White);
         }
     }
     main{
