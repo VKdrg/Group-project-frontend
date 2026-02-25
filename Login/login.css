@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--ff-Out-Fit);
+    outline: none;
 }
 
 :root {
@@ -47,8 +48,6 @@
 
 /* ###### Body ###### */
 body{
-    font-family: var(--ff-Out-Fit);
-    color: var(--Color-1);
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -126,6 +125,13 @@ body.light_mode{
         }
         ion-icon{
             color: var(--Color-1);
+        }
+    }
+    main{
+        background-color: var(--White);
+
+        input{
+            background-color: var(--Color-4);
         }
     }
     footer{
@@ -240,10 +246,7 @@ main{
             display: flex;
             align-items: center;
             gap: 8px;
-            
-            label{
-                display: none;
-            }
+
             input{
                 width: 100%;
             }

@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--ff-Out-Fit);
+    outline: none;
 }
 
 :root{
@@ -46,7 +47,6 @@
 
 /* ###### Body ###### */
 body{
-    color: var(--Color-1);
     position: relative;
 
     a{
