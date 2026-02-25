@@ -26,21 +26,35 @@
     </nav>
 
     <main>
-        <h1>Se connecter</h1>
+        <h1 class="header_1">Se connecter</h1>
         <form id="loginForm" action="" method="post">
             <div id="username">
                 <label for="userEmail"></label>
-                <input type="text" name="userEmail" id="inputEmail">
+                <input type="text" name="userEmail" id="inputEmail" placeholder="Email" class="paragraph_2">
             </div>
-            <div>
+            <div class="password">
                 <label for="userpw"></label>
-                <input type="password" name="userpw" id="inputPw">
-                <ion-icon name="eye-outline" id="pwViewIcon"></ion-icon>
+                <input type="password" name="userpw" id="inputPw" placeholder="Mot de passe" class="paragraph_2">
+                <ion-icon name="eye-outline" id="pwViewIcon" class="header_4"></ion-icon>
             </div>
             <button type="submit" class="header_4">Valider</button>
         </form>
-        <a href="../Register/register.html">Créer un compte</a>
+        <a href="../Register/register.html" class="paragraph_2">Créer un compte</a>
     </main>
+
+    <footer>
+        <div class="reseaux">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-google"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <div class="mention">
+            <h4 class="caption">Mentions légales</h4>
+            <h4 class="caption">Conditions</h4>
+        </div>
+    </footer>
 
 </body>
 

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet groupe</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="register.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script type="module" src="../main.js" defer></script>
@@ -20,7 +19,7 @@
         <div class="right">
             <ion-icon name="moon-outline" class="icon_dark_mode header_4"></ion-icon>
             <a href="Login/login.html">
-                <ion-icon name="person-outline" class="header_4" />
+                <ion-icon name="person-outline" class="header_4"/>
             </a>
         </div>
     </nav>
@@ -29,18 +28,32 @@
         <h1 class="header_1">Créer un compte</h1>
         <form id="registerForm" action="" method="post">
             <div id="username">
-                <label for="userEmail">Créer un nom d'utilisateur</label>
-                <input type="text" name="userEmail" id="inputEmail">
+                <label for="userEmail"></label>
+                <input type="text" name="userEmail" id="inputEmail" placeholder="Entrez un email" class="paragraph_2">
             </div>
-            <div>
-                <label for="userpw">Créer un mot de passe</label>
-                <input type="password" name="userpw" id="inputPw">
-                <ion-icon name="eye-outline" id="pwViewIcon"></ion-icon>
+            <div class="password">
+                <label for="userpw"></label>
+                <input type="password" name="userpw" id="inputPw" placeholder="Créer un mot de passe" class="paragraph_2">
+                <ion-icon name="eye-outline" id="pwViewIcon" class="header_4"></ion-icon>
             </div>
             <button type="submit" class="header_4">Valider</button>
         </form>
         <a href="../Login/login.html">Se connecter</a>
     </main>
+
+    <footer>
+        <div class="reseaux">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-google"></ion-icon>
+            <ion-icon name="logo-youtube"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+        </div>
+        <div class="mention">
+            <h4 class="caption">Mentions légales</h4>
+            <h4 class="caption">Conditions</h4>
+        </div>
+    </footer>
 
 </body>
 
