@@ -47,29 +47,132 @@
 /* ###### Body ###### */
 body {
     color: var(--Color-1);
+    padding: 110px 0 166px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
 }
 
-button {
-    padding: 8px 56px;
+body.light_mode {
     background-color: var(--Color-1);
-    color: var(--White);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color ease 500ms, border ease 500ms;
-}
-
-button:hover {
-    background-color: var(--Color-2);
-}
-
-button:active {
-    background-color: var(--White);
-    border: 2px solid var(--Color-1);
     color: var(--Color-1);
+
+    button {
+        background-color: var(--Color-1);
+        color: var(--White);
+
+        a {
+            color: var(--White);
+        }
+    }
+
+    button:hover {
+        background-color: var(--Color-2);
+    }
+
+    button:focus {
+        background-color: var(--White);
+        border-color: var(--Color-1);
+        color: var(--Color-1);
+
+        a {
+            color: var(--Color-1);
+        }
+    }
+
+    nav {
+        background-color: var(--Color-5);
+        position: fixed;
+        top: 0;
+
+        a {
+            color: var(--Color-1);
+        }
+
+        span {
+            color: var(--Color-1);
+        }
+
+        .dropdown_content {
+            border-color: var(--Color-1);
+            background-color: var(--Color-4);
+        }
+    }
+
+    footer {
+        background-color: var(--White);
+    }
+}
+
+/* ###### Dark Mode ###### */
+body.dark_mode {
+    background-color: var(--Black);
+    color: var(--White);
+
+    button {
+        background-color: var(--White);
+        color: var(--Color-1);
+
+        a {
+            color: var(--Color-1);
+        }
+    }
+
+    button:hover {
+        color: var(--Color-2);
+
+        a {
+            color: var(--Color-2);
+        }
+    }
+
+    button:focus {
+        background-color: var(--Color-1);
+        border-color: var(--White);
+        color: var(--White);
+
+        a {
+            color: var(--White);
+        }
+    }
+
+    nav {
+        background-color: var(--Color-1);
+
+        a {
+            color: var(--Color-4);
+        }
+
+        span {
+            color: var(--Color-4);
+        }
+
+        .dropdown_content {
+            border-color: var(--Color-4);
+            background-color: var(--Color-1);
+        }
+    }
+
+    footer {
+        background-color: var(--Color-1);
+    }
 }
 
 #registerForm {
     display: flex;
     flex-direction: column;
+}
+
+main {
+    padding: 110px 0 166px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+a:hover{
+    text-decoration: underline;
 }
