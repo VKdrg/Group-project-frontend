@@ -223,13 +223,27 @@ nav.view{
 
 /* ###### Main ###### */
 main{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 16px;
+    padding: 16px;
     gap: 16px;
     border-radius: 16px;
+    opacity: 0;
+    scale: .5;
+    translate: 0 -150px;
+    transition: 400ms ease 600ms;
 
+    .icon_close{
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+    }
+    .icon_close:hover{
+        color: var(--Color-2);
+    }
     form{
         display: flex;
         flex-direction: column;
@@ -259,6 +273,12 @@ main{
         align-items: center;
         margin: 0 auto;
     }
+}
+
+main.view{
+    opacity: 1;
+    scale: 1;
+    translate: 0;
 }
 
 /* ###### Footer ###### */
@@ -331,7 +351,7 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 48px 24px;
+        padding: 24px;
 
         form{
             input{
@@ -387,7 +407,7 @@ footer{
 
     /* ###### Main ###### */
     main{
-        padding: 64px 32px;
+        padding: 32px;
 
         form{
             input{

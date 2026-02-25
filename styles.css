@@ -134,6 +134,14 @@ body.light_mode{
                     .fiches{
                         border-color: var(--Black);
                     }
+                    .fiches:hover{
+                        background-color: var(--Color-1);
+                        color: var(--White);
+
+                        p:nth-child(3){
+                            color: var(--Color-2);
+                        }
+                    }
                 }
                 .button_container{
                     button{
@@ -194,6 +202,14 @@ body.dark_mode{
                 .container{
                     .fiches{
                         border-color: var(--Color-2);
+                    }
+                    .fiches:hover{
+                        background-color: var(--Color-2);
+                        color: var(--Black);
+
+                        p:nth-child(3){
+                            color: var(--Color-5);
+                        }
                     }
                 }
                 .button_container{
@@ -310,7 +326,7 @@ main{
                     gap: 25px;
                     border: 3px solid;
                     cursor: pointer;
-                    transition: transform ease 500ms;
+                    transition: transform ease 500ms, background-color ease 500ms, color ease 500ms;
 
                     img{
                         width: 81px;

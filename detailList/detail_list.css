@@ -129,10 +129,47 @@ body.light_mode{
         }
     }
     main{
+        .top_df{
+            button{
+                background-color: var(--White);
+                color: var(--Color-1);
+
+                a{
+                    color: var(--Color-1);
+                }
+            }
+            button:hover{
+                background-color: var(--Color-2);
+                color: var(--White);
+
+                a{
+                    color: var(--White);
+                }
+            }
+        }
         .candidatures_tables{
             background-color: var(--White);
             .fiches{
                 border-color: var(--Black);
+            }
+            .fiches:hover{
+                background-color: var(--Color-1);
+                color: var(--White);
+
+                p:nth-child(3){
+                    color: var(--Color-2);
+                }
+                ion-icon:hover{
+                    color: var(--Color-2);
+                }
+            }
+            .fiches:hover button{
+                background-color: var(--White);
+                color: var(--Black);
+            }
+            .fiches:hover button:hover{
+                background-color: var(--Color-2);
+                color: var(--White);
             }
         }
     }
@@ -234,10 +271,48 @@ body.dark_mode{
         }
     }
     main{
+        .top_df{
+            button{
+                background-color: var(--Color-1);
+                color: var(--White);
+
+                a{
+                    color: var(--White);
+                }
+            }
+            button:hover{
+                background-color: var(--White);
+                color: var(--Color-1);
+
+                a{
+                    color: var(--Color-1);
+                }
+            }
+        }
         .candidatures_tables{
             background-color: var(--Color-1);
+
             .fiches{
                 border-color: var(--Color-2);
+            }
+            .fiches:hover{
+                background-color: var(--Color-2);
+                color: var(--Black);
+
+                p:nth-child(3){
+                    color: var(--Color-5);
+                }
+                ion-icon:hover{
+                    color: var(--White);
+                }
+            }
+            .fiches:hover button{
+                background-color: var(--Color-1);
+                color: var(--White);
+            }
+            .fiches:hover button:hover{
+                background-color: var(--White);
+                color: var(--Black);
             }
         }
     }
@@ -332,25 +407,36 @@ main{
     align-items: center;
     gap: 16px;
 
-    .button_retour{
+    .top_df{
+        width: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
+        gap: 8px;
         opacity: 0;
         translate: 150px 0;
         transition: 500ms translate 1.2s ease, 500ms opacity 1.2s ease;
-        
+
+        button{
+            width: auto;
+            padding: 8px 16px;
+        }
+        .button_retour{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button_retour:hover{
+            ion-icon{
+                translate: 5px;
+            }
+        }
         ion-icon{
             transform: translateY(3px);
             transition: translate ease 300ms;
         }
     }
-    .button_retour:hover{
-        ion-icon{
-            translate: 5px;
-        }
-    }
-    .button_retour.view{
+    .top_df.view{
         opacity: 1;
         translate: 0;
     }
@@ -590,8 +676,13 @@ footer{
     main{
         padding: 115px 16px 166px 16px;
 
-        .button_retour{
-            align-self: flex-end;
+        .top_df{
+            flex-direction: row;
+            justify-content: space-between;
+
+            button{
+                padding: 12px 24px;
+            }
         }
         .candidatures_tables{
             border-radius: 16px;
