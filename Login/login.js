@@ -1,9 +1,9 @@
-const pw = document.querySelector('#inputPw').value
-const useremail = document.querySelector('#inputEmail').value
-const icon = document.querySelector('#pwViewIcon')
-
 async function Login(e) {
     e.preventDefault()
+
+    const pw = document.querySelector('#inputPw').value
+    const useremail = document.querySelector('#inputEmail').value
+    const icon = document.querySelector('#pwViewIcon')
 
     console.log('you are in login');
 
@@ -27,7 +27,6 @@ async function Login(e) {
     catch (error) {
         console.error(`error : ${error}`)
     }
-    // window.location.href = "index.html"
 }
 
-const btnLogin = document.getElementById("loginForm").addEventListener("submit", Login)
+const loginForm = document.getElementById("loginForm").addEventListener("submit", Login)

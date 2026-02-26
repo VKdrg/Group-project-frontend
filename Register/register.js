@@ -1,9 +1,9 @@
-const pw = document.querySelector('#inputPw').value
-const useremail = document.querySelector('#inputEmail').value
-const icon = document.querySelector('#pwViewIcon')
-
 async function Register(e) {
     e.preventDefault()
+
+    const pw = document.querySelector('#inputPw').value
+    const useremail = document.querySelector('#inputEmail').value
+    const icon = document.querySelector('#pwViewIcon')
 
     console.log('you are in register')
 
@@ -19,7 +19,7 @@ async function Register(e) {
             })
         })
         const data = await response.json()
-        console.log('FDP')
+        console.log(data)
         // redirect login
     }
     catch (error) {

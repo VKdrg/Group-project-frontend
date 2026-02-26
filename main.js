@@ -40,7 +40,7 @@ function DeleteAccount() {
         .finally(localStorage.setItem("token", ''))
 }
 
-export async function ListJobs() {
+async function ListJobs() {
     // réccup tous : GET jobs
     const response = await fetch(`http://localhost:3000/api/job`, {
         method: "GET",
@@ -52,13 +52,23 @@ export async function ListJobs() {
     const data = await response.json()
     data.map(job => {
         console.log('you are in listjobs')
-        
+
         const CompNameVw = document.querySelector('.nom h4')
         CompNameVw.textContent = job.job;
         console.log(job.job);
 
         const EditPanel = document.querySelector('.modifier_candidature')
         CompNameVw.textContent = data.job.value
+        const card = `<>
+                        <div class="fiche_1 fiches">
+                            <img src="assets/img/images.jpg" alt="image">
+                            <div class="df">
+                                <p class="paragraph_1">${compname} - ${jobname} </p>
+                                <p class="caption"> ${workfieldname} </p>
+                                <p class="paragraph_2">Candidature : ${senddate}</p>
+                            </div>
+                        </div>
+                    </>`
     })
 
     const overviewnames = document.querySelector('.df .paragraph_1')

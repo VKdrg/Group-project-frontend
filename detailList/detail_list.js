@@ -1,4 +1,4 @@
-export function afficherCandidatures() {
+function afficherCandidatures() {
     const voirCandidatures = document.querySelector('.voir_candidature')
     const buttonVoir = document.querySelectorAll('.button_voir')
     const buttonModifier = document.querySelectorAll('.button_modifier')
@@ -33,7 +33,7 @@ export function afficherCandidatures() {
     })
 }
 
-export function modifierCandidatures() {
+function modifierCandidatures() {
     const modifierCandidatures = document.querySelector('.modifier_candidature')
     const buttonModifier = document.querySelectorAll('.button_modifier')
     const buttonFermerCandidatures = document.querySelector('.icon_close')
