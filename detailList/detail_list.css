@@ -564,6 +564,7 @@ main{
                         width: 81px;
                         height: 81px;
                         border-radius: 50%;
+                        object-fit: cover;
                     }
                     .df{
                         display: flex;

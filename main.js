@@ -1,6 +1,6 @@
+import { observe } from "./JS/observer.js"
 import { DarkMode } from "./JS/darkmode.js"
 import { CreateJob, DeleteJob, EditJob, ListJobs, ViewJob } from "./JS/jobs.js"
-import { observe } from "./JS/observer.js"
 import { DeleteAccount, EditProfile, Login, Register, viewPassword, ViewProfile } from "./JS/profile.js"
 import { modifierCandidatures } from "./JS/modifierCandidatures.js"
 import { afficherCandidatures } from "./JS/afficherCandidatures.js"
