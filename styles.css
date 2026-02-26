@@ -48,6 +48,7 @@
 /* ###### Body ###### */
 body{
     position: relative;
+    min-height: 100vh;
 
     a{
         color: var(--Color-1);
