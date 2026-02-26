@@ -522,9 +522,22 @@ main{
                 cursor: pointer;
             }
         }
+        .filtre{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            
+            select{
+                background-color: var(--Color-1);
+                color: var(--White);
+                border: none;
+                cursor: pointer;
+            }
+        }
         .bot{
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 16px;
 
             .fiches{
