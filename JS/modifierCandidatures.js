@@ -24,6 +24,5 @@ export function modifierCandidatures() {
     buttonSave.addEventListener('click', ()=>{
         modifierCandidatures.style.visibility = 'hidden'
         modifierCandidatures.style.opacity = '0'
-        buttonSave.style.color = 'black'
     })
 }

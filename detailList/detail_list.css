@@ -530,8 +530,10 @@ main{
             select{
                 background-color: var(--Color-1);
                 color: var(--White);
-                border: none;
+                border: 1px solid var(--White);
                 cursor: pointer;
+                padding: 8px;
+                border-radius: 8px;
             }
         }
         .bot{
