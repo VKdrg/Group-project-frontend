@@ -1,6 +1,6 @@
 export async function ListJobs() {
     // réccup tous : GET jobs
-    const response = await fetch(`http://localhost:3000/api/job`, {
+    const response = await fetch(`http://localhost:3000/api/jobs`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json', // à inclure si un payload est envoyé
@@ -18,7 +18,8 @@ export async function ListJobs() {
     })
     
     const overviewnames = document.querySelector('.df .paragraph_1')
-    const compname = document.querySelector('')
+    const compname = document.querySelector('#compname').value
+    const jobname = document.querySelector('#jobname').value
     overviewnames.innerHTML = `${compname} - ${jobname}`
 }
 

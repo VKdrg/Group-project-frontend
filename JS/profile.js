@@ -1,5 +1,18 @@
 export function ViewProfile() {
     // view profile : fetch api method GET api/profil
+    fetch('http://localhost:3000/api/profil', {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json"
+        }
+        })
+        .then(res => res.json())
+        .then(data => {
+            data.json()
+            console.log(data)
+        })
+        .catch(err => console.error(`Error: ${err}`))
+        .finally()
 }
 
 export function EditProfile() {
@@ -8,23 +21,35 @@ export function EditProfile() {
 
 export function DeleteAccount() {
     // delete account : fetch api method DELETE api/profile
+    const body = {}
+    fetch('http://localhost:3000/api/profil', {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
+    })
+        .then(res => res.json())
+        .then(data => {
+            data.json()
+            console.log(data)
+        })
+        .catch(err => console.error(`Error: ${err}`))
+        .finally(localStorage.setItem("token", ''))
 }
+
+export function viewPassword() {
+    if (pw.type === "password") {
+        pw.type = "text"
+    }
+    else {
+        pw.type = "password"
+    }
+}
+const icon = document.querySelector('#pwViewIcon')
 
 export function Login() {
     // const pw = document.querySelector('#inputPw').value
-    const icon = document.querySelector('#pwViewIcon')
-
-    /*     --- icon eye ---     */
-    // function viewPassword() {
-    //     if (pw.type === "password") {
-    //         pw.type = "text"
-    //     }
-    //     else {
-    //         pw.type = "password"
-    //     }
-    // }
-
-
 
     const useremail = document.querySelector('#inputEmail')
 
