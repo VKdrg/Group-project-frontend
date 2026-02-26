@@ -1,6 +1,6 @@
 export async function ListJobs() {
     // réccup tous : GET jobs
-    const response = await fetch(`http://localhost:3000/api/jobs`, {
+    const response = await fetch(`http://localhost:3000/api/job`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json', // à inclure si un payload est envoyé
@@ -8,7 +8,9 @@ export async function ListJobs() {
         }
     })
     const data = await response.json()
-    data.forEach(job => {
+    data.map(job => {
+        console.log('you are in listjobs')
+        
         const CompNameVw = document.querySelector('.nom h4')
         CompNameVw.textContent = job.job;
         console.log(job.job);
@@ -16,7 +18,7 @@ export async function ListJobs() {
         const EditPanel = document.querySelector('.modifier_candidature')
         CompNameVw.textContent = data.job.value
     })
-    
+
     const overviewnames = document.querySelector('.df .paragraph_1')
     const compname = document.querySelector('#compname').value
     const jobname = document.querySelector('#jobname').value

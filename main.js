@@ -11,22 +11,22 @@ observe()
 DarkMode()
 
 // Profile actions
-Login()
-Register()
+// Login()
+// Register()
 
-ViewProfile()
-EditProfile() /* --- */
-DeleteAccount()
+// ViewProfile()
+// EditProfile() /* --- */
+// DeleteAccount()
 
-// Job actions
-ListJobs()
-CreateJob()
-ViewJob()
-EditJob()
-DeleteJob()
+// // Job actions
+// ListJobs()
+// CreateJob()
+// ViewJob()
+// EditJob()
+// DeleteJob()
 
-modifierCandidatures()
-afficherCandidatures()
+// modifierCandidatures()
+// afficherCandidatures()
 
 // Company actions
 
@@ -35,3 +35,4 @@ afficherCandidatures()
 
 
 // Type actions
+    const btn = document.getElementById("loginForm").addEventListener("submit",Login)

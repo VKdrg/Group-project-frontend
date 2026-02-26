@@ -1,11 +1,11 @@
 export function ViewProfile() {
     // view profile : fetch api method GET api/profil
-    fetch('http://localhost:3000/api/profil', {
+    fetch('http://localhost:3000/api/profile', {
         method: 'GET',
         headers: {
             "Content-Type": "application/json"
         }
-        })
+    })
         .then(res => res.json())
         .then(data => {
             data.json()
@@ -22,7 +22,7 @@ export function EditProfile() {
 export function DeleteAccount() {
     // delete account : fetch api method DELETE api/profile
     const body = {}
-    fetch('http://localhost:3000/api/profil', {
+    fetch('http://localhost:3000/api/profile', {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json"
@@ -48,17 +48,22 @@ export function viewPassword() {
 }
 const icon = document.querySelector('#pwViewIcon')
 
-export function Login() {
-    // const pw = document.querySelector('#inputPw').value
+export async function Login(e) {
+    e.preventDefault()
 
-    const useremail = document.querySelector('#inputEmail')
+    const pw = document.querySelector('#inputPw').value
+    const useremail = document.querySelector('#inputEmail').value
 
     const body = {
-        email: "admin@test.com",
-        password: "admin1234"
+        email: useremail,
+        password: pw
     }
+    // email: "admin@test.com",
+    // password: "admin1234"
 
-    async function loginRequest() {
+    // async function loginRequest() {
+    console.log('you are in login');
+    
         try {
             const response = await fetch('http://localhost:3000/api/login', {
                 method: 'POST',
@@ -76,22 +81,18 @@ export function Login() {
         catch (error) {
             console.error(`error : ${error}`)
         }
+        // window.location.href = "index.html"
     }
+    // loginRequest()
 
 
-    loginRequest()
 
     // icon.addEventListener("click", () => {
     //     viewPassword()
-    //     icon.name.toggle('eye-outline')
-    //     icon.name.toggle('eye-off-outline')
+    //     icon.name = 'eye-outline'
+    //     icon.name = 'eye-off-outline'
     // })
-
-    // fetch api method post
-    // localStorage Token
-
-
-}
+// }
 
 export function Register() {
     const pw = document.querySelector('#inputPw')
