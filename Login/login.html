@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./login.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script type="module" src="../main.js" defer></script>
+    <script type="module" src="main.js" defer></script>
+    <script type="module" src="login.js" defer></script>
 </head>
 
 <body class="light_mode">
@@ -19,7 +20,7 @@
         </a>
         <div class="right">
             <ion-icon name="moon-outline" class="icon_dark_mode header_4"></ion-icon>
-            <a href="Login/login.html">
+            <a href="login.html">
                 <ion-icon name="person-outline" class="header_4" />
             </a>
         </div>
@@ -31,16 +32,18 @@
         <form id="loginForm" action="">
             <div id="username">
                 <input
+                    required
                     type="text"
                     name="userEmail"
                     id="inputEmail"
                     placeholder="Email"
-                    aria-label="Saisissez l'émail"
+                    aria-label="Saisissez l'email"
                     class="paragraph_2"
                 >
             </div>
             <div class="password">
                 <input
+                    required
                     type="password"
                     name="userpw"
                     id="inputPw"
@@ -50,7 +53,7 @@
                 >
                 <ion-icon name="eye-outline" id="pwViewIcon" class="icon_eye header_4"></ion-icon>
             </div>
-            <button id="btn" type="submit" class="header_4">Valider</button>
+            <button type="submit" class="header_4">Valider</button>
         </form>
         <a href="../Register/register.html" class="paragraph_2">Créer un compte</a>
     </main>
