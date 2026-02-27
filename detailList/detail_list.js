@@ -32,6 +32,7 @@ function afficherCandidatures() {
         })
     })
 }
+const showbtn = document.querySelector('.button_modifier').addEventListener('click', afficherCandidatures())
 
 function modifierCandidatures() {
     const modifierCandidatures = document.querySelector('.modifier_candidature')
@@ -63,9 +64,11 @@ function modifierCandidatures() {
         modifierCandidatures.style.opacity = '0'
     })
 }
+const editbtn = document.querySelector('.button_modifier').addEventListener('click', modifierCandidatures()) 
 
 export async function CreateJob() {
     // créa job : POST job
+
     const response = await fetch(`http://localhost:3000/api/job`, {
         method: "POST",
         headers: {
@@ -73,11 +76,10 @@ export async function CreateJob() {
             'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
         },
         body: JSON.stringify({
-            job: document.querySelector('#jobname').value,
-            sendDate: document.querySelector('#senddate').value
-            // offerTypeId: ,
-            // entrepriseId: ,
-            // userId:
+            job: document.querySelector('#createjobname').value,
+            sendDate: document.querySelector('#createsenddate').value,
+            // offerTypeId: document.querySelector('/*DoesNotExistInHTML*/').value,
+            entrepriseId: document.querySelector('#createcompname').value,
         })
     })
     const data = await response.json()
@@ -104,8 +106,42 @@ export async function CreateJob() {
 
 }
 
-const btncreate = document.querySelector('#createbtn').addEventListener('submit', (e) => {
+const btncreate = document.querySelector('#createbtn').addEventListener('click', (e) => {
     e.preventDefault()
     CreateJob()
-    console.log(CreateJob().data)
+    console.log(CreateJob())
 })
+
+// dropdown select type d'offre
+/* 
+    api/offer-types : {
+        "status": "SUCCESS",
+        "offerTypes": [
+            {
+            "idOffer": 1,
+            "type": "CDI"
+            },
+            {
+            "idOffer": 2,
+            "type": "CDD"
+            },
+            {
+            "idOffer": 3,
+            "type": "Stage"
+            },
+            {
+            "idOffer": 4,
+            "type": "Alternance"
+            }
+        ]
+    }
+*/
+async function dropdownOfferType() {
+    const response = await fetch(`http://localhost:3000/api/offer-types`, {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json', // à inclure si un payload est envoyé
+            'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
+        }
+    })
+}

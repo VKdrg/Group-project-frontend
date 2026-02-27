@@ -54,8 +54,8 @@ async function ListJobs() {
         console.log('you are in listjobs')
 
         const CompNameVw = document.querySelector('.nom h4')
-        CompNameVw.textContent = job.job;
-        console.log(job.job);
+        CompNameVw.textContent = job.job
+        console.log(job.job)
 
         const EditPanel = document.querySelector('.modifier_candidature')
         CompNameVw.textContent = data.job.value

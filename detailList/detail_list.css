@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 /* ###### Global ###### */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,8 +9,8 @@
     outline: none;
 }
 
-:root{
-    
+:root {
+
     /* ### Color ###*/
     --Black: #000;
     --White: #fff;
@@ -46,378 +46,442 @@
 }
 
 /* ###### Body ###### */
-body{
+body {
     position: relative;
     min-height: 100vh;
 
-    a{
+    a {
         color: var(--Color-1);
         text-decoration: none;
     }
-    .header_1{
+
+    .header_1 {
         font-size: var(--fs-30);
         font-weight: var(--fw-Black);
     }
-    .header_2{
+
+    .header_2 {
         font-size: var(--fs-28);
         font-weight: var(--fw-Bold);
     }
-    .header_3{
+
+    .header_3 {
         font-size: var(--fs-24);
         font-weight: var(--fw-Semi-Bold);
     }
-    .header_4{
+
+    .header_4 {
         font-size: var(--fs-16);
         font-weight: var(--fw-Medium);
     }
-    .paragraph_1{
+
+    .paragraph_1 {
         font-size: var(--fs-16);
         font-weight: var(--fw-Light);
     }
-    .paragraph_2{
+
+    .paragraph_2 {
         font-size: var(--fs-12);
         font-weight: var(--fw-Extra-Light);
     }
-    .caption{
+
+    .caption {
         font-size: var(--fs-10);
         font-weight: var(--fw-Thin);
     }
-    button{
+
+    button {
         padding: 8px 56px;
         border: none;
         border-radius: 8px;
         cursor: pointer;
         transition: background-color ease 500ms, border ease 500ms;
     }
-    button:focus{
+
+    button:focus {
         border: 2px solid;
     }
 }
 
 /* ###### Light Mode ###### */
-body.light_mode{
+body.light_mode {
     background-color: var(--Color-1);
     color: var(--Color-1);
 
-    button{
+    button {
         background-color: var(--Color-1);
         color: var(--White);
 
-        a{
+        a {
             color: var(--White);
         }
     }
-    button:hover{
+
+    button:hover {
         background-color: var(--Color-2);
     }
-    button:focus{
+
+    button:focus {
         background-color: var(--White);
         border-color: var(--Color-1);
         color: var(--Color-1);
 
-        a{
+        a {
             color: var(--Color-1);
         }
     }
-    nav{
+
+    nav {
         background-color: var(--Color-5);
-    
-        a{
+
+        a {
             color: var(--Color-1);
         }
-        ion-icon{
+
+        ion-icon {
             color: var(--Color-1);
         }
     }
-    main{
-        .top_df{
-            button{
+
+    main {
+        .top_df {
+            button {
                 background-color: var(--White);
                 color: var(--Color-1);
 
-                a{
+                a {
                     color: var(--Color-1);
                 }
             }
-            button:hover{
+
+            button:hover {
                 background-color: var(--Color-2);
                 color: var(--White);
 
-                a{
+                a {
                     color: var(--White);
                 }
             }
         }
-        .candidatures_tables{
+
+        .candidatures_tables {
             background-color: var(--White);
 
-            .top{
-                select{
+            .top {
+                select {
                     background-color: var(--White);
                     border-color: var(--Color-1);
                     color: var(--Color-1);
                 }
             }
-            .fiches{
+
+            .fiches {
                 border-color: var(--Black);
             }
-            .fiches:hover{
+
+            .fiches:hover {
                 background-color: var(--Color-1);
                 color: var(--White);
 
-                p:nth-child(3){
+                p:nth-child(3) {
                     color: var(--Color-2);
                 }
-                ion-icon:hover{
+
+                ion-icon:hover {
                     color: var(--Color-2);
                 }
             }
-            .fiches:hover button{
+
+            .fiches:hover button {
                 background-color: var(--White);
                 color: var(--Black);
             }
-            .fiches:hover button:hover{
+
+            .fiches:hover button:hover {
                 background-color: var(--Color-2);
                 color: var(--White);
             }
         }
     }
-    .modifier_candidature{
+
+    .modifier_candidature {
         color: var(--White);
         background-color: var(--Color-1);
         border-color: var(--Color-2);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
-            select{
+
+            select {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
             color: var(--Color-1);
         }
-        button:hover{
+
+        button:hover {
             color: var(--Color-2);
         }
-        button:focus{
+
+        button:focus {
             color: var(--Black);
             border-color: var(--Black);
         }
     }
-    .voir_candidature{
+
+    .voir_candidature {
         color: var(--White);
         background-color: var(--Color-1);
         border-color: var(--Color-2);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
-            select{
+
+            select {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
             color: var(--Color-1);
         }
-        button:hover{
+
+        button:hover {
             color: var(--Color-2);
         }
-        button:focus{
+
+        button:focus {
             border-color: var(--Black);
         }
     }
-    .nouvelle_candidature{
+
+    .nouvelle_candidature {
         color: var(--White);
         background-color: var(--Color-1);
         border-color: var(--Color-2);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
-            select{
+
+            select {
                 background-color: var(--White);
                 color: var(--Color-1);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
             color: var(--Color-1);
         }
-        button:hover{
+
+        button:hover {
             color: var(--Color-2);
         }
-        button:focus{
+
+        button:focus {
             color: var(--Black);
             border-color: var(--Black);
         }
     }
-    footer{
+
+    footer {
         background-color: var(--White);
     }
 }
 
 /* ###### Dark Mode ###### */
-body.dark_mode{
+body.dark_mode {
     background-color: var(--Black);
     color: var(--White);
 
-    button{
+    button {
         background-color: var(--White);
         color: var(--Color-1);
 
-        a{
+        a {
             color: var(--Color-1);
         }
     }
-    button:hover{
+
+    button:hover {
         color: var(--Color-2);
 
-        a{
+        a {
             color: var(--Color-2);
         }
     }
-    button:focus{
+
+    button:focus {
         background-color: var(--Color-1);
         border-color: var(--White);
         color: var(--White);
 
-        a{
+        a {
             color: var(--White);
         }
     }
-    nav{
+
+    nav {
         background-color: var(--Color-1);
 
-        a{
+        a {
             color: var(--White);
         }
-        ion-icon{
+
+        ion-icon {
             color: var(--White);
         }
     }
-    main{
-        .top_df{
-            button{
+
+    main {
+        .top_df {
+            button {
                 background-color: var(--Color-1);
                 color: var(--White);
 
-                a{
+                a {
                     color: var(--White);
                 }
             }
-            button:hover{
+
+            button:hover {
                 background-color: var(--White);
                 color: var(--Color-1);
 
-                a{
+                a {
                     color: var(--Color-1);
                 }
             }
         }
-        .candidatures_tables{
+
+        .candidatures_tables {
             background-color: var(--Color-1);
 
-            .top{
-                select{
+            .top {
+                select {
                     border-color: var(--White);
                     background-color: var(--Color-1);
                     color: white;
                 }
             }
-            .fiches{
+
+            .fiches {
                 border-color: var(--Color-2);
             }
-            .fiches:hover{
+
+            .fiches:hover {
                 background-color: var(--Color-2);
                 color: var(--Black);
 
-                p:nth-child(3){
-                    color: var(--Color-5);
+                .left {
+                    .df {
+                        p:nth-child(3) {
+                            color: var(--Color-5);
+                        }
+                    }
                 }
-                ion-icon:hover{
+
+                ion-icon:hover {
                     color: var(--White);
                 }
             }
-            .fiches:hover button{
+
+            .fiches:hover button {
                 background-color: var(--Color-1);
                 color: var(--White);
             }
-            .fiches:hover button:hover{
+
+            .fiches:hover button:hover {
                 background-color: var(--White);
                 color: var(--Black);
             }
         }
     }
-    .modifier_candidature{
+
+    .modifier_candidature {
         background-color: var(--Color-2);
         border-color: var(--White);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
             }
-            select{
+
+            select {
                 background-color: var(--White);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
         }
     }
-    .voir_candidature{
+
+    .voir_candidature {
         background-color: var(--Color-2);
         border-color: var(--White);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
             }
-            select{
+
+            select {
                 background-color: var(--White);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
         }
-        button:focus{
+
+        button:focus {
             color: var(--Black);
         }
     }
-    .nouvelle_candidature{
+
+    .nouvelle_candidature {
         background-color: var(--Color-2);
         border-color: var(--White);
 
-        .selections{
-            input{
+        .selections {
+            input {
                 background-color: var(--White);
             }
-            select{
+
+            select {
                 background-color: var(--White);
             }
         }
-        button{
+
+        button {
             background-color: var(--White);
         }
     }
-    footer{
+
+    footer {
         background-color: var(--Color-1);
     }
 }
 
 
 /* ###### Nav ###### */
-nav{
+nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -430,35 +494,38 @@ nav{
     opacity: 0;
     transition: translate cubic-bezier(0, 0, 0, 1) 600ms, opacity cubic-bezier(0, 0, 0, 1) 600ms;
 
-    h3{
+    h3 {
         cursor: pointer;
         transition: color ease-out 300ms;
     }
-    h3:hover{
+
+    h3:hover {
         color: var(--Color-2);
     }
-    .right{
+
+    .right {
         display: flex;
         gap: 16px;
 
-        ion-icon{
+        ion-icon {
             cursor: pointer;
             transition: color ease-out 300ms;
             font-size: 30px;
         }
-        ion-icon:hover{
+
+        ion-icon:hover {
             color: var(--Color-2);
         }
     }
 }
 
-nav.view{
+nav.view {
     translate: 0;
     opacity: 1;
 }
 
 /* ###### Main ###### */
-main{
+main {
     padding: 110px 0 166px 0;
     display: flex;
     justify-content: center;
@@ -466,7 +533,7 @@ main{
     align-items: center;
     gap: 16px;
 
-    .top_df{
+    .top_df {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -476,30 +543,35 @@ main{
         translate: 150px 0;
         transition: 500ms translate 1.2s ease, 500ms opacity 1.2s ease;
 
-        button{
+        button {
             width: auto;
             padding: 8px 16px;
         }
-        .button_retour{
+
+        .button_retour {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .button_retour:hover{
-            ion-icon{
+
+        .button_retour:hover {
+            ion-icon {
                 translate: 5px;
             }
         }
-        ion-icon{
+
+        ion-icon {
             transform: translateY(3px);
             transition: translate ease 300ms;
         }
     }
-    .top_df.view{
+
+    .top_df.view {
         opacity: 1;
         translate: 0;
     }
-    .candidatures_tables{
+
+    .candidatures_tables {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -510,24 +582,25 @@ main{
         padding: 32px;
         gap: 16px;
 
-        .top{
+        .top {
             display: flex;
             align-items: center;
             gap: 16px;
 
-            select{
+            select {
                 padding: 8px 16px;
                 border-radius: 8px;
                 border: 1px solid;
                 cursor: pointer;
             }
         }
-        .filtre{
+
+        .filtre {
             display: flex;
             align-items: center;
             gap: 16px;
-            
-            select{
+
+            select {
                 background-color: var(--Color-1);
                 color: var(--White);
                 border: 1px solid var(--White);
@@ -536,13 +609,14 @@ main{
                 border-radius: 8px;
             }
         }
-        .bot{
+
+        .bot {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 16px;
 
-            .fiches{
+            .fiches {
                 padding: 16px;
                 width: 100%;
                 max-width: 550px;
@@ -555,42 +629,46 @@ main{
                 cursor: pointer;
                 transition: transform ease 500ms;
 
-                .left{
+                .left {
                     display: flex;
                     align-items: center;
                     gap: 16px;
-                    
-                    img{
+
+                    img {
                         width: 81px;
                         height: 81px;
                         border-radius: 50%;
                     }
-                    .df{
+
+                    .df {
                         display: flex;
                         flex-direction: column;
                         gap: 8px;
 
-                        p:nth-child(3){
+                        p:nth-child(3) {
                             color: var(--Color-2);
                         }
                     }
                 }
-                .right{
+
+                .right {
                     display: flex;
                     flex-direction: row-reverse;
                     justify-content: space-between;
                     align-items: center;
                     gap: 8px;
 
-                    ion-icon:hover{
+                    ion-icon:hover {
                         color: var(--Color-2);
                     }
                 }
             }
-            .fiches:hover{
+
+            .fiches:hover {
                 transform: translateY(-10px);
             }
-            .button_container{
+
+            .button_container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -598,15 +676,17 @@ main{
                 height: 141px;
             }
         }
-        }
-    .candidatures_tables.view{
+    }
+
+    .candidatures_tables.view {
         translate: 0;
         opacity: 1;
     }
 }
 
 /* ###### Modifier Candidatures et Nouvelle Candidature ###### */
-.modifier_candidature, .nouvelle_candidature{
+.modifier_candidature,
+.nouvelle_candidature {
     z-index: 100;
     position: fixed;
     padding: 16px;
@@ -627,27 +707,29 @@ main{
     transition: opacity ease 600ms;
     opacity: 0;
 
-    .icon_close{
+    .icon_close {
         position: absolute;
         top: 16px;
         right: 16px;
         cursor: pointer;
     }
-    .selections{
+
+    .selections {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 16px;
 
-        input{
+        input {
             width: 100%;
             padding: 8px 24px;
             border: none;
             border-radius: 16px;
             outline: none;
         }
-        select{
+
+        select {
             width: 100%;
             padding: 8px 24px;
             border: none;
@@ -655,7 +737,8 @@ main{
             cursor: pointer;
         }
     }
-    textarea{
+
+    textarea {
         width: 100%;
         height: 96px;
         padding: 16px;
@@ -665,7 +748,7 @@ main{
 }
 
 /* ###### Voir Candidatures ###### */
-.voir_candidature{
+.voir_candidature {
     z-index: 100;
     position: fixed;
     padding: 16px;
@@ -684,13 +767,14 @@ main{
     transition: opacity ease 600ms;
     opacity: 0;
 
-    .icon_close{
+    .icon_close {
         position: absolute;
         top: 16px;
         right: 16px;
         cursor: pointer;
     }
-    .divs{
+
+    .divs {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -699,7 +783,7 @@ main{
 }
 
 /* ###### Footer ###### */
-footer{
+footer {
     position: absolute;
     width: 100%;
     left: 0;
@@ -711,112 +795,125 @@ footer{
     gap: 16px;
     padding: 32px 0;
 
-    .reseaux{
+    .reseaux {
         display: flex;
         gap: 8px;
 
-        ion-icon{
+        ion-icon {
             font-size: 18px;
             cursor: pointer;
         }
     }
-    .mention{
+
+    .mention {
         display: flex;
         gap: 16px;
-        
-        h4{
+
+        h4 {
             cursor: pointer;
         }
-        h4:hover{
+
+        h4:hover {
             text-decoration: underline;
         }
     }
 }
 
-@media screen and (min-width: 800px){
-    
-    /* ###### Body ###### */
-    body{
+@media screen and (min-width: 800px) {
 
-        .header_1{
+    /* ###### Body ###### */
+    body {
+
+        .header_1 {
             font-size: var(--fs-39);
         }
-        .header_2{
+
+        .header_2 {
             font-size: var(--fs-34);
         }
-        .header_3{
+
+        .header_3 {
             font-size: var(--fs-28);
         }
-        .header_4{
+
+        .header_4 {
             font-size: var(--fs-20);
         }
-        .paragraph_1{
+
+        .paragraph_1 {
             font-size: var(--fs-18);
         }
-        .paragraph_2{
+
+        .paragraph_2 {
             font-size: var(--fs-14);
         }
-        .caption{
+
+        .caption {
             font-size: var(--fs-13);
         }
     }
 
     /* ###### Nav ###### */
-    nav{
+    nav {
         padding: 16px 24px;
     }
 
     /* ###### Main ###### */
-    main{
+    main {
         padding: 115px 16px 166px 16px;
 
-        .top_df{
+        .top_df {
             flex-direction: row;
             justify-content: space-between;
 
-            button{
+            button {
                 padding: 12px 24px;
             }
         }
-        .candidatures_tables{
+
+        .candidatures_tables {
             border-radius: 16px;
 
-            .fiches{
+            .fiches {
                 flex-direction: row;
                 justify-content: start;
                 justify-content: center;
                 padding: 16px;
 
-                button{
+                button {
                     align-self: flex-end;
                 }
-                .right{
+
+                .right {
                     flex-direction: column;
                     justify-content: space-between;
                     gap: 8px;
 
-                    ion-icon{
+                    ion-icon {
                         align-self: flex-end;
                     }
                 }
             }
         }
     }
+
     /* ###### Modifier candidature ###### */
-    .modifier_candidature{
+    .modifier_candidature {
         padding: 24px;
         border-radius: 12px;
         z-index: 70;
 
-        .selections{
-            input{
+        .selections {
+            input {
                 width: auto;
             }
-            select{
+
+            select {
                 width: auto;
             }
         }
-        textarea{
+
+        textarea {
             width: 100%;
             height: 96px;
             padding: 16px;
@@ -824,13 +921,15 @@ footer{
             outline: none;
         }
     }
+
     /* ###### Voir Candidatures ###### */
-    .voir_candidature{
+    .voir_candidature {
         z-index: 70;
         width: 500px;
     }
+
     /* ###### Footer ###### */
-    footer{
+    footer {
         width: 100%;
         position: absolute;
         left: 0;
@@ -840,46 +939,52 @@ footer{
     }
 }
 
-@media screen and (min-width: 1280px){
-    
-    /* ###### Body ###### */
-    body{
+@media screen and (min-width: 1280px) {
 
-        .header_1{
+    /* ###### Body ###### */
+    body {
+
+        .header_1 {
             font-size: var(--fs-48);
         }
-        .header_2{
+
+        .header_2 {
             font-size: var(--fs-40);
         }
-        .header_3{
+
+        .header_3 {
             font-size: var(--fs-32);
         }
-        .header_4{
+
+        .header_4 {
             font-size: var(--fs-24);
         }
-        .paragraph_1{
+
+        .paragraph_1 {
             font-size: var(--fs-20);
         }
-        .paragraph_2{
+
+        .paragraph_2 {
             font-size: var(--fs-16);
         }
-        .caption{
+
+        .caption {
             font-size: var(--fs-16);
         }
     }
 
     /* ###### Nav ###### */
-    nav{
+    nav {
         padding: 16px 24px;
     }
 
     /* ###### Main ###### */
-    main{
+    main {
         padding: 115px 32px 166px 32px;
     }
 
     /* ###### Footer ###### */
-    footer{
+    footer {
         padding: 32px;
     }
 }

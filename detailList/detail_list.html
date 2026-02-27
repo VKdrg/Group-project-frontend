@@ -26,7 +26,7 @@
             </a>
         </div>
     </nav>
-    
+
     <main>
         <div class="top_df">
             <button class="button_ajout_candidatures paragraph_1">Ajouter une nouvelle candidature</button>
@@ -180,11 +180,11 @@
         <ion-icon name="close-outline" class="icon_close header_4"></ion-icon>
         <h2 class="header_2">Modifier candidature</h2>
         <div class="selections">
-            <input type="text" id="compname" placeholder="Nom de l'entreprise" class="paragraph_1">
-            <input type="text" id="locname" placeholder="Lieu" class="paragraph_1">
-            <input type="text" id="jobname" placeholder="Intitulé du poste" class="paragraph_1">
-            <input type="date" id="senddate" class="paragraph_1">
-            <select name="statuts" id="statuts" class="paragraph_1">
+            <input type="text" id="editcompname" placeholder="Nom de l'entreprise" class="paragraph_1">
+            <input type="text" id="editlocname" placeholder="Lieu" class="paragraph_1">
+            <input type="text" id="editjobname" placeholder="Intitulé du poste" class="paragraph_1">
+            <input type="date" id="editsenddate" class="paragraph_1">
+            <select name="status" id="editstatus" class="paragraph_1">
                 <option value="1">Premier entretien</option>
                 <option value="2">Candidature envoyée</option>
                 <option value="3">Refusé</option>
@@ -220,11 +220,11 @@
         <ion-icon name="close-outline" class="icon_close header_4"></ion-icon>
         <h2 class="header_2">Créer une candidature</h2>
         <div class="selections">
-            <input type="text" placeholder="Nom de l'entreprise" class="paragraph_1">
-            <input type="text" placeholder="Lieu" class="paragraph_1">
-            <input type="text" placeholder="Intitulé du poste" class="paragraph_1">
-            <input type="date" class="paragraph_1">
-            <select name="statuts" id="statuts" class="paragraph_1">
+            <input required type="text" id="createcompname" placeholder="Nom de l'entreprise" class="paragraph_1">
+            <input type="text" id="createlocname" placeholder="Lieu" class="paragraph_1">
+            <input required type="text" id="createjobname" placeholder="Intitulé du poste" class="paragraph_1">
+            <input type="date" id="createsenddate" class="paragraph_1">
+            <select name="status" id="createstatus" class="paragraph_1">
                 <option value="1">Premier entretien</option>
                 <option value="2">Candidature envoyée</option>
                 <option value="3">Refusé</option>
