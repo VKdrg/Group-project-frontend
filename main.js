@@ -59,16 +59,14 @@ async function ListJobs() {
 
         const EditPanel = document.querySelector('.modifier_candidature')
         CompNameVw.textContent = data.job.value
-        const card = `<>
-                        <div class="fiche_1 fiches">
+        const card = `<div class="fiche_1 fiches">
                             <img src="assets/img/images.jpg" alt="image">
                             <div class="df">
-                                <p class="paragraph_1">${compname} - ${jobname} </p>
+                                <p class="paragraph_1">${compname} - ${jobname}</p>
                                 <p class="caption"> ${workfieldname} </p>
                                 <p class="paragraph_2">Candidature : ${senddate}</p>
                             </div>
-                        </div>
-                    </>`
+                        </div>`
     })
 
     const overviewnames = document.querySelector('.df .paragraph_1')
@@ -110,11 +108,6 @@ async function ListJobs() {
         }
     }
 */
-
-export function CreateJob() {
-    // créa job : POST job
-
-}
 
 export function ViewJob() {
     // details job : GET job/{id}

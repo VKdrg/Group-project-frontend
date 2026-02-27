@@ -63,3 +63,49 @@ function modifierCandidatures() {
         modifierCandidatures.style.opacity = '0'
     })
 }
+
+export async function CreateJob() {
+    // créa job : POST job
+    const response = await fetch(`http://localhost:3000/api/job`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json', // à inclure si un payload est envoyé
+            'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
+        },
+        body: JSON.stringify({
+            job: document.querySelector('#jobname').value,
+            sendDate: document.querySelector('#senddate').value
+            // offerTypeId: ,
+            // entrepriseId: ,
+            // userId:
+        })
+    })
+    const data = await response.json()
+    console.log('you are in createJob')
+
+    // fetch(`http://localhost:3000/api/job`, {
+    //     method: "POST",
+    //     headers: {
+    //         'Content-Type': 'application/json', // à inclure si un payload est envoyé
+    //         'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
+    //     }})
+    //     .then()
+
+    /*      PAYLOAD "POST" JOB
+        {
+            "job": "test001",
+            "sendDate": "12/12/12",
+            "offerTypeId": 2,
+            "entrepriseId": 1,
+            "statusId": 1,
+            "userId": 3
+        }
+    */
+
+}
+
+const btncreate = document.querySelector('#createbtn').addEventListener('submit', (e) => {
+    e.preventDefault()
+    CreateJob()
+    console.log(CreateJob().data)
+})
