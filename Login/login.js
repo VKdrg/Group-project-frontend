@@ -28,5 +28,4 @@ async function Login(e) {
         console.error(`error : ${error}`)
     }
 }
-
 const loginForm = document.getElementById("loginForm").addEventListener("submit", Login)

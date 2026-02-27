@@ -32,7 +32,10 @@ function afficherCandidatures() {
         })
     })
 }
-const showbtn = document.querySelector('.button_modifier').addEventListener('click', afficherCandidatures())
+const showbtn = document.querySelectorAll('.button_voir')
+showbtn.forEach((btn) => {
+    btn.addEventListener('click', afficherCandidatures())
+})
 
 function modifierCandidatures() {
     const modifierCandidatures = document.querySelector('.modifier_candidature')
@@ -64,7 +67,10 @@ function modifierCandidatures() {
         modifierCandidatures.style.opacity = '0'
     })
 }
-const editbtn = document.querySelector('.button_modifier').addEventListener('click', modifierCandidatures()) 
+const editbtn = document.querySelectorAll('.button_modifier')
+editbtn.forEach((btn) => {
+    btn.addEventListener('click', modifierCandidatures())    
+}) 
 
 export async function CreateJob() {
     // créa job : POST job
@@ -85,14 +91,6 @@ export async function CreateJob() {
     const data = await response.json()
     console.log('you are in createJob')
 
-    // fetch(`http://localhost:3000/api/job`, {
-    //     method: "POST",
-    //     headers: {
-    //         'Content-Type': 'application/json', // à inclure si un payload est envoyé
-    //         'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
-    //     }})
-    //     .then()
-
     /*      PAYLOAD "POST" JOB
         {
             "job": "test001",
@@ -105,11 +103,9 @@ export async function CreateJob() {
     */
 
 }
-
-const btncreate = document.querySelector('#createbtn').addEventListener('click', (e) => {
-    e.preventDefault()
-    CreateJob()
-    console.log(CreateJob())
+const btncreate = document.querySelectorAll('.button_ajout_candidatures')
+btncreate.forEach((btn) => {
+    btn.addEventListener('click', CreateJob())    
 })
 
 // dropdown select type d'offre
@@ -136,6 +132,8 @@ const btncreate = document.querySelector('#createbtn').addEventListener('click',
         ]
     }
 */
+
+
 async function dropdownOfferType() {
     const response = await fetch(`http://localhost:3000/api/offer-types`, {
         method: "GET",
@@ -144,4 +142,15 @@ async function dropdownOfferType() {
             'Authorization': `Bearer ${localStorage.getItem("token")}`, // renseigner le token pour accéder aux routes protégées
         }
     })
+    const data = response.json()
+    data.map(d => {
+        const dropdownoption = document.createElement('option')
+        dropdownoption.textContent = d.type
+        dropdownoption.id = `${d.idOffer}`
+        const select = document.getElementsByClassName('selections')
+        select.appendChild(dropdownoption)
+        dropdownoption.className.add('paragraph_1')
+    })
+
 }
+dropdownOfferType()

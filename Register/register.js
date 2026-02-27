@@ -29,5 +29,4 @@ async function Register(e) {
     // regex mail
 
 }
-
 const btnRegister = document.getElementById("registerForm").addEventListener("submit", Register)
