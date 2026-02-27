@@ -282,7 +282,7 @@ main{
         flex-direction: column;
         opacity: 0;
         translate: 250px 0;
-        transition: 500ms translate 600ms ease, 500ms opacity 600ms ease;
+        transition: 500ms translate 600ms cubic-bezier(0, 0, 0, 1), 500ms opacity 600ms cubic-bezier(0, 0, 0, 1);
         width: 100%;
         
         .top{
@@ -496,7 +496,7 @@ footer{
 
     /* ###### Nav ###### */
     nav{
-        padding: 16px 24px;
+        padding: 16px 32px;
     }
 
     /* ###### Main ###### */

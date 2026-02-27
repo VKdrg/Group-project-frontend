@@ -512,7 +512,8 @@ main{
 
         .top{
             display: flex;
-            align-items: center;
+            justify-content: center;    
+            flex-direction: column;
             gap: 16px;
 
             select{
@@ -524,7 +525,8 @@ main{
         }
         .filtre{
             display: flex;
-            align-items: center;
+            justify-content: center;
+            flex-direction: column;
             gap: 16px;
             
             select{
@@ -782,6 +784,16 @@ footer{
         .candidatures_tables{
             border-radius: 16px;
 
+            .top{
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+            }
+            .filtre{
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+            }
             .fiches{
                 flex-direction: row;
                 justify-content: start;
