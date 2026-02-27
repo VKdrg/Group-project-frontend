@@ -209,7 +209,7 @@ body.dark_mode{
                         color: var(--Black);
 
                         p:nth-child(3){
-                            color: var(--Color-5);
+                            color: var(--White);
                         }
                     }
                 }

@@ -26,8 +26,9 @@ DarkMode()
 // EditJob()
 // DeleteJob()
 
-// modifierCandidatures()
-// afficherCandidatures()
+modifierCandidatures()
+afficherCandidatures()
+nouvelleCandidatures()
 
 // Company actions
 
