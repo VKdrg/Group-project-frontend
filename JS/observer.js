@@ -1,6 +1,5 @@
 export function observe() {
     window.addEventListener('load', () => {
-        document.querySelector('nav').style.width = '100%'
         document.querySelector('nav').classList.add('view');
     });
 
