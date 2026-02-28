@@ -30,4 +30,8 @@ async function Login(e) {
         console.error(`error : ${error}`)
     }
 }
-const loginForm = document.getElementById("loginForm").addEventListener("submit", Login)
+const loginForm = document.getElementById("loginForm")
+loginForm.addEventListener("submit", (e) => {
+    Login(e)
+    window.location.href = '../index.html'
+})
