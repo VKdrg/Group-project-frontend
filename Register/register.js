@@ -5,8 +5,6 @@ async function Register(e) {
     const useremail = document.querySelector('#inputEmail').value
     const icon = document.querySelector('#pwViewIcon')
 
-    console.log('you are in register')
-
     try {
         const response = await fetch('http://localhost:3000/api/sign', {
             method: 'POST',
@@ -19,14 +17,13 @@ async function Register(e) {
             })
         })
         const data = await response.json()
-        console.log(data)
-        // redirect login
     }
     catch (error) {
         console.error(`Error : ${error}`)
     }
-
-    // regex mail
-
 }
-const btnRegister = document.getElementById("registerForm").addEventListener("submit", Register)
+const btnRegister = document.getElementById("registerForm")
+btnRegister.addEventListener("submit", (e) => {
+    Register(e)
+    window.location.href = '../Login/login.html'
+})

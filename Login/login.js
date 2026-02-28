@@ -5,8 +5,6 @@ async function Login(e) {
     const useremail = document.querySelector('#inputEmail').value
     const icon = document.querySelector('#pwViewIcon')
 
-    console.log('you are in login');
-
     try {
         const response = await fetch('http://localhost:3000/api/login', {
             method: 'POST',
@@ -19,9 +17,13 @@ async function Login(e) {
             })
         })
         const data = await response.json()
+
+        if (data.connected.status === "SUCCESS") {
+            
+        }
+
         const jwt = data.connected.token
         localStorage.setItem('token', jwt)
-        console.log(`token : ${jwt}`)
         return jwt
     }
     catch (error) {

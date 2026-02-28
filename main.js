@@ -121,39 +121,3 @@ export function DeleteJob() {
     // delete job : DELETE job/{id}
 }
 
-/**     ASYNC FUNCTION
- *   async function updatePost() {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1',{
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                ifd: 1,
-                title: 'Post modifié',
-                body: 'Nouveau contenu',
-            userId: 1
-            })
-        })
-        const data = await response.json()
-        console.log('Post modifié :', data)
-    }
-    catch (err) {
-        console.error('Erreur:', err)
-    }
-}
-*/
-
-/**     .THEN ... .CATCH
- *  version promise
-  function deletePost() {
-    fetch('https://jsonplaceholder.typicode.com/posts/1', {
-      method: 'DELETE'
-    })
-      .then(response => response.json())
-      .then(data => console.log("post supprimé :", data))
-      .catch(err => console.error("Erreur :", err))
-  }
-  deletePost() // appel 
-*/
