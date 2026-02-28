@@ -45,6 +45,10 @@
     --ff-Out-Fit: "Outfit", sans-serif;
 }
 
+nav{
+    width: 100%;
+}
+
 /* ###### Body ###### */
 body{
     position: relative;
@@ -426,7 +430,6 @@ body.dark_mode{
 
 /* ###### Nav ###### */
 nav{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
